@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" class="theme-switch">
+        <label for="theme-switch" class="theme-switch-label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <div class="container">
+        <div class="app-header">
+            <h1>Image to PDF Converter</h1>
+            <p class="tagline">Transform your images into professional PDFs in seconds</p>
+        </div>
+        
+        <div class="card upload-section">
+            <div class="card-content">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Upload Your Images</h3>
+                <p>Select multiple images to convert into a PDF document</p>
+                <label for="image-upload" class="upload-button">
+                    <i class="fas fa-images"></i> Select Images
+                </label>
+                <input type="file" id="image-upload" accept="image/*" multiple>
+                <p class="file-info">No files selected</p>
+            </div>
+        </div>
+
+        <div id="image-preview-container" class="hidden">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-edit"></i> Arrange and Edit Pages</h2>
+                </div>
+                <div class="card-content">
+                    <div class="controls">
+                        <button id="add-page" class="btn btn-secondary">
+                            <i class="fas fa-plus"></i> Add Blank Page
+                        </button>
+                        <div class="select-wrapper">
+                            <i class="fas fa-file-pdf"></i>
+                            <select id="page-size" class="select-dropdown">
+                                <option value="a4">A4</option>
+                                <option value="letter">Letter</option>
+                                <option value="legal">Legal</option>
+                            </select>
+                        </div>
+                        <button id="generate-pdf" class="btn btn-primary">
+                            <i class="fas fa-file-download"></i> Generate PDF
+                        </button>
+                    </div>
+                    
+                    <div id="pages-container"></div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>Made with <i class="fas fa-heart"></i> for document management</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
