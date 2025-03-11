@@ -11,8 +11,7 @@ A web-based tool to convert images to PDF format using HTML, CSS, and JavaScript
 
 ## Live Demo
 
-You can try out the tool here: [IMG-To-PDF](https://img-to-pdf-lilac.vercel.app)
-
+You can try out the tool here: <a href="https://img-to-pdf-lilac.vercel.app" target="_blank">IMG-To-PDF</a>
 
 ## Installation
 
